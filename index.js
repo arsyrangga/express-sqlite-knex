@@ -12,6 +12,8 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+const PORT = process.env.PORT;
+
 //route
 
 app.get("/api/users", async (req, res) => {
@@ -100,6 +102,6 @@ app.get("/api/notes", (req, res) => {
 });
 
 //listener
-app.listen(8080, () => {
+app.listen(PORT, () => {
   console.log("terhubung ke server");
 });
